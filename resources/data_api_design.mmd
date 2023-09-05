@@ -1,0 +1,17 @@
+classDiagram
+    class Wallet{
+        +str address
+        +float balance
+        +__init__(address: str, balance: float)
+        +create_wallet() -> str
+        +get_balance() -> float
+    }
+    class Transaction{
+        +str sender
+        +str receiver
+        +float amount
+        +__init__(sender: str, receiver: str, amount: float)
+        +send_bitcoin() -> bool
+        +get_transaction_history() -> List[Dict[str, Union[str, float]]]
+    }
+    Wallet "1" -- "*" Transaction: has

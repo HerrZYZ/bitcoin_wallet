@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant M as Main
+    participant W as Wallet
+    participant T as Transaction
+    M->>W: create_wallet()
+    Note right of W: Wallet is created
+    M->>W: get_balance()
+    Note right of W: Balance is retrieved
+    M->>T: send_bitcoin()
+    Note right of T: Bitcoin is sent
+    M->>T: get_transaction_history()
+    Note right of T: Transaction history is retrieved
